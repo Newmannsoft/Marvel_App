@@ -1,0 +1,6 @@
+<form class="d-flex" ngSubmit="submit" >
+       
+    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"
+    #txtBuscar>
+    <button pButton class="p-button-danger p-button-rounded"  (click)="onClick()" label="Buscar" icon="pi-spin" [loading]="isLoading" type="submit"></button>
+  </form>

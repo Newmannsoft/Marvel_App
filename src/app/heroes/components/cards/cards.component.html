@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+
+        <div class="row">
+            <div class=" mt-4 col-md-4 col-sm-6 col-xs-12" *ngFor="let personaje of todosLosPersonajes | async" >
+
+                <p-card >
+                    <ng-template pTemplate="header">
+                        <img style="max-width:100vh; max-height: 240px;" src="{{personaje.thumbnail.path}}.{{personaje.thumbnail.extension}}" alt="">
+                        <div class="p-card-title">
+                            {{personaje.name}} 
+                        </div>
+
+                        
+                        <app-comics [urlComics]="personaje.comics.collectionURI"></app-comics>
+                    </ng-template>
+                    
+                    <ng-template pTemplate="footer">
+                        
+                    </ng-template>
+                </p-card>
+                
+            </div>
+        </div>
+
+
